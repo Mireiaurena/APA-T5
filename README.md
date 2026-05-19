@@ -201,13 +201,13 @@ De todos modos, recuerde que, aunque sea en alemán, se trata de los Beatles, as
 innecesariamente la canción.
 **Comprovación de funcionamento:**   
 `estereo2mono()`   
-![alt text](estereo2mono.png)     
+![alt text](estereo2mono().png)     
 `mono2estereo()`    
-![alt text](mono2estereo.png)   
+![alt text](mono2estereo().png)   
 `codEstereo()`   
-![alt text](codEstereo.png)   
+![alt text](codEstereo().png)   
 `decEstereo()`   
-![alt text](decEstereo.png) 
+![alt text](decEstereo().png) 
 
 #### Código desarrollado
 
