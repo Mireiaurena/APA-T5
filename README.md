@@ -386,30 +386,6 @@ def decEstereo(ficCod, ficEste, sample_rate=44100):
     with open(ficEste, 'wb') as f:
         f.write(header)
         f.write(data_bytes)
-
-
-if __name__ == '__main__':
-    fic_binario = 'audio_codificado.bin'
-    
-    try:
-        estereo2mono(fichero, FicIzq, canal=0)
-        estereo2mono(fichero, FicDer, canal=1)
-        
-        estereo2mono(fichero, salida3, canal=2)
-        mono2estereo(FicIzq, FicDer, salida2)
-        fs_original = codEstereo(fichero, fic_binario)
-        decEstereo(fic_binario, salida1, sample_rate=fs_original)
-        
-        with open(fichero, 'rb') as f:
-            f.seek(24)
-            fs = st.unpack('<I', f.read(4))[0]
-
-        with open(fichero, 'rb') as f:
-            f.seek(44)
-            muestras_est = np.frombuffer(f.read(), dtype='<i2').reshape(-1, 2)
-        with open(salida3, 'rb') as f:
-            f.seek(44)
-            muestras_mono = np.frombuffer(f.read(), dtype='<i2')
 ```
 
 #### Subida del resultado al repositorio GitHub y *pull-request*
